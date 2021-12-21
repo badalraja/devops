@@ -2,7 +2,7 @@ service: ${env:PRJ}-service
 custom:
   secrets:
     dev: 
-      db_creds: ${ssm:/aws/reference/secretsmanager/${env:ENV}/db-creds~true}
+      db_creds: ${ssm:/aws/reference/secretsmanager/${env:ENV}/rds-secret~true}
       #db_user: ${ssm:/${env:PRJ}/${env:ENV}/db-user}
       #db_host: ${ssm:/${env:PRJ}/${env:ENV}/db-host}
       #db_password: ${ssm:/${env:PRJ}/${env:ENV}/db-password}
